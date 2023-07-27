@@ -1,0 +1,39 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Register</title>
+
+<style>
+    input{
+        width: 50%;
+        padding: 5px ;
+        margin:8px 0;
+        box-sizing: border-box;
+        padding: 12px 20px;
+        border: 2px solid black;
+        border-radius: 4px;
+        background-color: beige;
+    }
+</style>    
+</head>
+<body>
+    <h4 class="px-4 py-3">Create an account</h4>
+    <form [formGroup]="user"(ngSubmit)="onSubmit()" action="" method="POST">
+        <label for="fname">Full name:</label><br>
+        <input type="text" id="fname" formControlName=fname name="fname" value="John Doe"><br>
+        <label for="userName">UserName:</label><br>
+        <input type="text" id="username" formControlName= userName name="username" value="mina"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" formControlName=email name="email" value="john@gmail.com"><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" formControlName="address" name="address" value="123 Fremont bldvd"><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" ><br>
+        <label for="password">Repeat Password</label><br>
+        <input type="password" id="password" name="password" ><br><br>
+        <input type="submit"  value="Register" style=" background-color: cornflowerblue; font-size: 20px; font-family: monospace">
+    </form>
+</body>
+</html>
