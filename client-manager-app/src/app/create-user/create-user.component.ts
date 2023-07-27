@@ -10,10 +10,7 @@ import { FormGroup,FormControl } from '@angular/forms';
 })
 export class CreateUserComponent {
   users:Users[]=[];
-  // fname:string="";
-  // email:string="";
-  // address:string="";
-  // username:string="";
+  
 
   user =new FormGroup({
   fname:new FormControl(),

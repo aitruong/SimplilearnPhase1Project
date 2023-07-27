@@ -32,12 +32,24 @@
 <body>
      
     <h4>Create A Meeting</h4>
-    <form>
+    <form [formGroup]="meetings" (ngSubmit)="onSubmit()" action="" method="POST">
         <table style="width: 100%;">
+            <tr>
+                <td>Meeting's Topic</td>
+                <td>
+                    <input type="text" formControlName="topic">
+                </td>
+            </tr>
+            <tr>
+                <td>Number of People</td>
+                <td>
+                    <input type="number" formControlName="number">
+                </td>
+            </tr>
             <tr>
                 <td>Starts</td>
                 <td>
-                    <input type="datetime-local">
+                    <input type="datetime-local" formControlName="startDate">
                 </td>
             </tr>
             <tr>
